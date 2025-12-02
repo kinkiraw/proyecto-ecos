@@ -251,7 +251,7 @@
       font-weight: 500;
     }
 
-    /* FORMULARIO */
+    /* FORMULARIO / CTA GOOGLE FORM */
 
     .form-section {
       background: var(--bg-alt);
@@ -270,29 +270,6 @@
       margin-bottom: 10px;
     }
 
-    .field-label {
-      font-size: 0.9rem;
-      color: #ddd;
-      margin-bottom: 4px;
-      display: inline-block;
-    }
-
-    .field-input {
-      padding: 12px;
-      background: #111018;
-      border: 1px solid #2a2735;
-      color: white;
-      border-radius: 8px;
-      width: 100%;
-      font-size: 0.95rem;
-    }
-
-    .field-input:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px rgba(255,179,77,0.4);
-    }
-
     .submit-btn {
       padding: 12px 20px;
       background: #ffb34d;
@@ -302,7 +279,12 @@
       border-radius: 8px;
       font-weight: 600;
       font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
       transition: all 0.15s ease-out;
+      margin-top: 8px;
     }
 
     .submit-btn:hover {
@@ -450,35 +432,27 @@
       </div>
     </section>
 
-    <!-- FORMULARIO -->
+    <!-- SECCIÓN CAPÍTULO / GOOGLE FORM -->
     <section id="capitulo" class="section form-section">
       <div class="form-wrapper">
         <h2 class="section-title" style="margin-bottom:8px;">Recibe un capítulo gratuito</h2>
         <p class="form-note">
-          Déjanos tu correo y te enviaremos el primer capítulo. Sin spam, solo literatura incómoda.
+          Para recibir el primer capítulo, haz clic en el botón de abajo. Se abrirá un formulario seguro de Google.
+          Al completarlo, tus datos quedarán registrados para poder enviarte el capítulo y futuras novedades.
         </p>
 
-        <!-- IMPORTANTE: en Vercel, GET + gracias.html funciona sin problemas -->
-        <form
-          name="ecos-capitulo"
-          method="GET"
-          action="gracias.html"
-          style="display:grid; gap:16px; margin-top:18px;"
+        <a
+          class="submit-btn"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfEcLXbAdNNlbmfWRuDnimdWnrX_S633lxi_ljZbhzSnu5UHw/viewform?usp=dialog"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <label>
-            <span class="field-label">Nombre completo</span>
-            <input class="field-input" type="text" name="nombre" required>
-          </label>
+          Abrir formulario de acceso
+        </a>
 
-          <label>
-            <span class="field-label">Correo electrónico</span>
-            <input class="field-input" type="email" name="email" required>
-          </label>
-
-          <button type="submit" class="submit-btn">
-            Recibir capítulo gratuito
-          </button>
-        </form>
+        <p class="form-note" style="margin-top:12px;">
+          El formulario se abre en una pestaña nueva. Una vez lo envíes, podrás volver a esta página o continuar con tu lectura.
+        </p>
       </div>
     </section>
 
